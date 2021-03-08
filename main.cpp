@@ -1,11 +1,13 @@
-#include <stdio>
+#include <iostream>
 #include <string>
+
+using namespace std;
 
 int main(){
     
     string test;
 
-    cout << "Welcome to Brian Corbita's Feature Selection Algorithm\n"
+    cout << "Welcome to Brian Corbita's Feature Selection Algorithm\n";
     cout << "Enter the name of the test file: ";
 
     cin >> test;
@@ -14,6 +16,6 @@ int main(){
     cout << "1. Forward Selection\n";
     cout << "2. Backward Elimination\n";
 
-    
+
 
 }
