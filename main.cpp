@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include "data.h"
 
 using namespace std;
 
@@ -16,6 +15,6 @@ int main(){
     cout << "1. Forward Selection\n";
     cout << "2. Backward Elimination\n";
 
-
+    
 
 }
