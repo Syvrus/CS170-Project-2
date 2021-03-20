@@ -14,12 +14,15 @@ class Data {
     bool forward = true;
 public:
     Data();
-
+//setters
     void setData(vector<vector<float>> d);
     void setDirection(bool d);
-
-
-    void validate();
-    float search(); //returns highest accuracy
+//Calculates accuracy
+    float validate(vector<int> f, int g);
+//Goes through data
+    void search(); 
+private:
+//helpers
+    float euclidean(vector<float> x, vector<float> y, vector<int> f, int j);
 
 };
