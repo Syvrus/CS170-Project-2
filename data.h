@@ -1,12 +1,14 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <cmath>
-#include <algorithm>
+#include <iostream> //cout
+#include <string> //string
+#include <fstream> //filestream
+#include <sstream> //stringstream
+#include <vector> //vector
+#include <cmath> //pow, sqrt
+#include <algorithm> //find
+#include <chrono> //keeping time
 
-using namespace std; 
+using namespace std;
+using namespace std::chrono;
 
 class Data {
     vector<vector<float>> data;

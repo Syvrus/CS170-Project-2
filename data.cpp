@@ -44,7 +44,7 @@ float Data::validate(vector<int> feat, int g){
 void Data::search(){
     float most = 0, best = 0;
     vector<int> features, bestFeats;
-
+    auto start = high_resolution_clock::now();
     //When forward selection is chosen
     if(forward){
         for(unsigned i = 1; i < data[0].size(); i++){
@@ -137,11 +137,14 @@ void Data::search(){
             most = 0;
        }
     }
+    auto end = high_resolution_clock::now();
+    auto time = duration_cast<microseconds>(end - start);
     cout << "Search complete. Best subset is: { ";
     for(unsigned i = 0; i < bestFeats.size() - 1; i++){
         cout << bestFeats[i] << ", ";
     }
     cout << bestFeats[bestFeats.size() - 1] << " } when an accuracy of " << best * 100 << "%\n";
+    cout << "Time taken: " << (double)time.count()/1000000 << " seconds\n";
 }
 //Based on the algorithm from geeksforgeeks
 float Data::euclidean(vector<float> x, vector<float> y, vector<int> feat, int g){
